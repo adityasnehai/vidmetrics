@@ -5,7 +5,7 @@
 </p>
 
 <p>
-  <video src="./docs/demo/vidmetrics-walkthrough.mp4" autoplay muted loop playsinline controls width="100%"></video>
+  <img alt="VidMetrics walkthrough" src="./docs/demo/vidmetrics-walkthrough.gif" width="100%" />
 </p>
 
 <p>
