@@ -9,6 +9,10 @@
 </p>
 
 <p>
+  <a href="./docs/build-notes.md"><strong>Detailed build notes</strong></a>
+</p>
+
+<p>
   <img alt="Next.js 16" src="https://img.shields.io/badge/Next.js-16-111111?style=flat-square&logo=next.js&logoColor=white" />
   <img alt="React 19" src="https://img.shields.io/badge/React-19-149ECA?style=flat-square&logo=react&logoColor=white" />
   <img alt="TypeScript" src="https://img.shields.io/badge/TypeScript-5-3178C6?style=flat-square&logo=typescript&logoColor=white" />
