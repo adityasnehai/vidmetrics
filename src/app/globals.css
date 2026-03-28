@@ -1,26 +1,144 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #f8f5fc;
+  --foreground: #161126;
+  --surface: #ffffff;
+  --surface-soft: #f6f0fc;
+  --surface-strong: #fcf9ff;
+  --border: #e8ddf6;
+  --border-strong: #d5c3ef;
+  --muted: #766a8e;
+  --muted-strong: #584b72;
+  --accent: #7c3aed;
+  --accent-strong: #5b21b6;
+  --accent-soft: #d7c3fb;
+  --accent-surface: #f3ebff;
+  --success: #0f8a6b;
+  --success-strong: #0f8a6b;
+  --success-surface: #ebfbf4;
+  --warning: #b45309;
+  --warning-strong: #b45309;
+  --warning-surface: #fffbeb;
+  --danger: #b91c1c;
+  --danger-strong: #b91c1c;
+  --danger-surface: #fef2f2;
+  --highlight: #d9c2ff;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-surface: var(--surface);
+  --color-surface-soft: var(--surface-soft);
+  --color-surface-strong: var(--surface-strong);
+  --color-border: var(--border);
+  --color-border-strong: var(--border-strong);
+  --color-muted: var(--muted);
+  --color-muted-strong: var(--muted-strong);
+  --color-accent: var(--accent);
+  --color-accent-strong: var(--accent-strong);
+  --color-accent-soft: var(--accent-soft);
+  --color-accent-surface: var(--accent-surface);
+  --color-success: var(--success);
+  --color-success-strong: var(--success-strong);
+  --color-success-surface: var(--success-surface);
+  --color-warning: var(--warning);
+  --color-warning-strong: var(--warning-strong);
+  --color-warning-surface: var(--warning-surface);
+  --color-danger: var(--danger);
+  --color-danger-strong: var(--danger-strong);
+  --color-danger-surface: var(--danger-surface);
+  --color-highlight: var(--highlight);
+  --font-sans:
+    ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+  --font-display: "Space Grotesk", sans-serif;
+  --font-mono: "IBM Plex Mono", monospace;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
+  min-height: 100vh;
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-image:
+    radial-gradient(
+      circle at top center,
+      rgba(124, 58, 237, 0.1),
+      transparent 34%
+    ),
+    radial-gradient(circle at left, rgba(168, 85, 247, 0.06), transparent 28%),
+    radial-gradient(
+      circle at bottom right,
+      rgba(59, 130, 246, 0.05),
+      transparent 26%
+    ),
+    linear-gradient(rgba(196, 181, 253, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(196, 181, 253, 0.08) 1px, transparent 1px),
+    linear-gradient(180deg, #fffefe 0%, #f7f3fc 46%, #f3f4fb 100%);
+  background-size:
+    auto,
+    auto,
+    auto,
+    32px 32px,
+    32px 32px,
+    auto;
+  background-position:
+    0 0,
+    0 0,
+    0 0,
+    center center,
+    center center,
+    0 0;
+  font-family: var(--font-sans);
+  line-height: 1.55;
+  text-rendering: optimizeLegibility;
+  letter-spacing: -0.01em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  color: inherit;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+select:-webkit-autofill {
+  -webkit-text-fill-color: var(--foreground);
+  -webkit-box-shadow: 0 0 0 1000px transparent inset;
+  transition: background-color 9999s ease-out 0s;
+}
+
+:focus-visible {
+  outline: 2px solid rgba(124, 58, 237, 0.22);
+  outline-offset: 2px;
+}
+
+.clean-url-input,
+.clean-url-input:focus,
+.clean-url-input:focus-visible {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+::selection {
+  background: rgba(124, 58, 237, 0.16);
 }
